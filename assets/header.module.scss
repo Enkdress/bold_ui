@@ -1,0 +1,22 @@
+@import "assets/variables.scss";
+
+.header {
+  background: rgb(17,30,108);
+  background: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(59,37,100,1) 59%, darken(rgba(239,67,64,1), 30) 100%);
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  & a {
+    color: white;
+    margin: 0 10px;
+  } 
+
+  & a:hover {
+    color: darken(white, 20);
+  }
+}
