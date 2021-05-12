@@ -1,7 +1,7 @@
 @import "assets/variables.scss";
 
 .header {
-  background: rgb(17,30,108);
+  background: $blue;
   background: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(59,37,100,1) 59%, darken(rgba(239,67,64,1), 30) 100%);
   padding: 20px 40px;
 

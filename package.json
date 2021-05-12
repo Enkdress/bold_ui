@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Enkdress/bold_ui#readme",
   "dependencies": {
     "antd": "^4.15.5",
+    "date-fns": "^2.21.3",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

@@ -1,0 +1,38 @@
+@import "assets/variables.scss";
+$gradientLight: linear-gradient(90deg, rgba(152,61,105,1) 0%, rgba(183,63,95,1) 50%, rgba(217,65,85,1) 71%, rgba(239,67,78,1) 100%);
+$gradientDark: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(59,37,100,1) 59%, darken(rgba(239,67,64,1), 30) 100%);
+
+.card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 8px 0 darken($background, 10);
+  max-height: 240px;
+}
+
+.titleDark, .titleLight {
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.titleLight {
+  background: darken($red, 20);
+  background: $gradientLight;
+}
+
+.titleDark {
+  background: darken($blue, 20);
+  background: $gradientDark;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  height: 100%;
+}

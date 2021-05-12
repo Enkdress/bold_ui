@@ -1,7 +1,7 @@
+import SalesResume from "components/Sales/salesResume";
+
 function Home() {
-  return (
-    <h1>Home</h1>
-  )
+  return <SalesResume />;
 }
 
 export default Home;
