@@ -1,25 +1,58 @@
 import styles from "assets/sales.module.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import useFilterContext from "components/Filter/useFilterContext";
+import { formatDate } from "components/helpers/formatDates";
 
 export function TimeFilters() {
+  const { setFilter, setSalesList } = useFilterContext();
+  const handleChange = ({ target }) => {
+    setFilter({ key: "dateFilter", filterValue: target.id });
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then(({ sales }) => {
+        setSalesList(sales);
+      });
+  };
+
   return (
     <div className={styles.container__timefilter}>
-      <input type="radio" id="today" name="filter" defaultChecked />
-      <label htmlFor="today">Hoy</label>
-      <input type="radio" id="week" name="filter" />
+      <input
+        onChange={handleChange}
+        type="radio"
+        id="day"
+        name="filter"
+        defaultChecked
+      />
+      <label htmlFor="day">Hoy</label>
+      <input onChange={handleChange} type="radio" id="week" name="filter" />
       <label htmlFor="week">Esta semana</label>
-      <input type="radio" id="month" name="filter" />
-      <label htmlFor="month">Septiembre</label>
+      <input onChange={handleChange} type="radio" id="month" name="filter" />
+      <label htmlFor="month">{formatDate().month}</label>
     </div>
   );
 }
 
 export function ExtraFilters() {
   const [isShowingFilters, setIsShowingFilters] = useState(false);
+  const { setFilter, setSalesList } = useFilterContext();
 
   const handleExpand = () => {
     setIsShowingFilters(!isShowingFilters);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let values = [];
+    Object.values(e.target).forEach((elem) => {
+      if (elem.checked && elem.nodeName == "INPUT") {
+        values.push(elem.value);
+      }
+    });
+    setFilter(values);
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then(({ sales }) => setSalesList(sales));
   };
 
   return (
@@ -38,7 +71,7 @@ export function ExtraFilters() {
             <h4>FILTRAR</h4>
             <button onClick={handleExpand}>X</button>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <p>
               <input type="checkbox" id="datafono" value="datafono" />
               <label htmlFor="datafono">Cobro con datafono</label>

@@ -1,4 +1,5 @@
 @import "assets/variables.scss";
+$gradientLight: linear-gradient(90deg, rgba(152,61,105,1) 0%, rgba(183,63,95,1) 50%, rgba(217,65,85,1) 71%, rgba(239,67,78,1) 100%);
 
 .container__resume {
   display: flex;
@@ -7,6 +8,25 @@
   & .filters {
     width: 58%;
     margin-left: 20px;
+  }
+
+  & .price, & .subtitle {
+    margin: 0;
+  }
+
+  & .price {
+    font-size: 3em;
+    font-weight: 900;
+    background: $gradientLight;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & .subtitle {
+    color: $blue;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
   }
 }
 
@@ -29,6 +49,7 @@
     padding: 8px;
     width: 33.3%;
     text-align: center;
+    text-transform: capitalize;
 
       &:hover {
         cursor: pointer;
@@ -84,6 +105,7 @@
     border-radius: 5px;
     position: absolute;
     width: 40%;
+    box-shadow: 0 4px 10px 0 rgba($lightGray, .4);
 
     & .heading {
       display: flex;

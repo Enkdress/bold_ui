@@ -11,9 +11,14 @@ $gradientDark: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(59,37,100,1) 59
 }
 
 .titleDark, .titleLight {
-  color: white;
   padding: 10px;
   border-radius: 8px 8px 0 0;
+
+  & h2 {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
 .titleLight {
