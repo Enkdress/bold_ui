@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 
   const res = await fetch("https://bold-ui.vercel.app/data.json");
   const data = await res.json();
-  console.log(data);
+
   const sales = data.sales.filter(
     (sale) => formatDate(sale.datetime).day == formatDate().day
   );

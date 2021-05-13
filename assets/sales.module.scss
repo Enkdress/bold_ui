@@ -170,3 +170,58 @@ $gradientLight: linear-gradient(90deg, rgba(152,61,105,1) 0%, rgba(183,63,95,1) 
   }
 }
 
+.custom-rows {
+  position: relative;
+}
+
+.table__transaction {
+  display: flex;
+  align-items: center;
+  color: $blue;
+
+  & > span {
+    margin-left: 4px;
+  }
+}
+
+.table__success:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 6px;
+  background: $blue;
+  border-radius: 0 15px 15px 0;
+}
+
+.table__no_success span {
+  margin-left: 8px;
+}
+
+.table__no_success:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 6px;
+  background: $lightGray;
+  border-radius: 0 8px 8px 0;
+}
+
+.table__payment {
+  display: flex;
+  align-items: center;
+  color: #666;
+  
+  & span {
+    margin-left: 10px;
+  }
+}
+
+.table__amount {
+  display: flex;
+  flex-direction: column;
+}
+
