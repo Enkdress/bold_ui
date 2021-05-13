@@ -1,8 +1,17 @@
 @import "assets/variables.scss";
 
+#__next {
+    height: fit-content;
+}
+
+body {
+    background: $background;
+}
+
 main {
   background-color: $background;
   padding: 40px;
+  height: calc(100% - 120px);
 }
 
 @media screen and (min-width: 2560px) {

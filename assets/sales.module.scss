@@ -4,6 +4,7 @@ $gradientLight: linear-gradient(90deg, rgba(152,61,105,1) 0%, rgba(183,63,95,1) 
 .container__resume {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 
   & .filters {
     width: 58%;
