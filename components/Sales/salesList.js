@@ -137,7 +137,7 @@ function SalesTable({ datasource = {} }) {
     },
   ];
 
-  const scroll = !datasource ? { x: true } : { y: 280, x: true };
+  const scroll = !datasource || datasource.length == 0 ? { x: true } : { y: 280, x: true };
 
   return (
     <Table
