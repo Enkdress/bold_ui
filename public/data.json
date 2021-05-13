@@ -1,39 +1,57 @@
 {
   "sales": [
     {
-      "state": "",
-      "datetime": "05/12/2021-10:21",
-      "payment_method": "",
+      "state": "cobro exitoso",
+      "datetime": "05/14/2021-10:21",
+      "payment_method": "**** **** **** 7711",
       "payment_type": "datafono",
-      "id_bold_transaction": "",
+      "id_bold_transaction": "GZEN23784UBV2",
       "amount": 100000,
       "bold_reduction": 15000
     },
     {
-      "state": "",
-      "datetime": "05/12/2021-10:21",
-      "payment_method": "",
+      "state": "cobro no realizado",
+      "datetime": "05/14/2021-10:21",
+      "payment_method": "**** **** **** 7711",
       "payment_type": "link",
-      "id_bold_transaction": "",
+      "id_bold_transaction": "GZEN23784UBV2",
+      "amount": 200000,
+      "bold_reduction": 0
+    },
+    {
+      "state": "cobro exitoso",
+      "datetime": "05/15/2021-10:21",
+      "payment_method": "**** **** **** 7711",
+      "payment_type": "datafono",
+      "id_bold_transaction": "GZEN23784UBV2",
+      "amount": 300000,
+      "bold_reduction": 15000
+    },
+    {
+      "state": "cobro exitoso",
+      "datetime": "05/15/2021-10:21",
+      "payment_method": "**** **** **** 7711",
+      "payment_type": "datafono",
+      "id_bold_transaction": "GZEN23784UBV2",
+      "amount": 300000,
+      "bold_reduction": 0
+    },
+    {
+      "state": "cobro no realizado",
+      "datetime": "05/15/2021-10:21",
+      "payment_method": "**** **** **** 7711",
+      "payment_type": "link",
+      "id_bold_transaction": "GZEN23784UBV2",
       "amount": 200000,
       "bold_reduction": 15000
     },
     {
-      "state": "",
-      "datetime": "05/07/2021-10:21",
-      "payment_method": "",
-      "payment_type": "datafono",
-      "id_bold_transaction": "",
-      "amount": 300000,
-      "bold_reduction": 15000
-    },
-    {
-      "state": "",
-      "datetime": "11/04/2021-10:21",
-      "payment_method": "",
-      "payment_type": "datafono",
-      "id_bold_transaction": "",
-      "amount": 300000,
+      "state": "cobro no realizado",
+      "datetime": "05/16/2021-10:21",
+      "payment_method": "**** **** **** 7711",
+      "payment_type": "link",
+      "id_bold_transaction": "GZEN23784UBV2",
+      "amount": 200000,
       "bold_reduction": 15000
     }
   ]
