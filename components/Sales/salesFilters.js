@@ -35,7 +35,7 @@ export function TimeFilters() {
 
 export function ExtraFilters() {
   const [isShowingFilters, setIsShowingFilters] = useState(false);
-  const { setFilter, setSalesList } = useFilterContext();
+  const { setFilter, setSalesList, filters } = useFilterContext();
 
   const handleExpand = () => {
     setIsShowingFilters(!isShowingFilters);
@@ -55,6 +55,14 @@ export function ExtraFilters() {
       .then(({ sales }) => setSalesList(sales));
   };
 
+  const setCheckedFilters = (name) => {
+
+  }
+
+  const isDatafonoChecked = filters?.otherFilter.find((filter) => filter == "datafono");
+  const isLinkChecked = filters?.otherFilter.find((filter) => filter == "link");
+  const isAllChecked = filters?.otherFilter.find((filter) => filter == "all");
+
   return (
     <div className={styles.container__extrafilter}>
       {!isShowingFilters && (
@@ -73,15 +81,15 @@ export function ExtraFilters() {
           </div>
           <form onSubmit={handleSubmit}>
             <p>
-              <input type="checkbox" id="datafono" value="datafono" />
+              <input type="checkbox" id="datafono" value="datafono" defaultChecked={isDatafonoChecked}/>
               <label htmlFor="datafono">Cobro con datafono</label>
             </p>
             <p>
-              <input type="checkbox" id="link" value="link" />
+              <input type="checkbox" id="link" value="link" defaultChecked={isLinkChecked} />
               <label htmlFor="link">Cobro con link de pago</label>
             </p>
             <p>
-              <input type="checkbox" id="all" value="all" />
+              <input type="checkbox" id="all" value="all" defaultChecked={isAllChecked} />
               <label htmlFor="all">Ver todos</label>
             </p>
             <button>Aplicar</button>
