@@ -1,0 +1,40 @@
+{
+  "sales": [
+    {
+      "state": "",
+      "datetime": "05/12/2021-10:21",
+      "payment_method": "",
+      "payment_type": "datafono",
+      "id_bold_transaction": "",
+      "amount": 100000,
+      "bold_reduction": 15000
+    },
+    {
+      "state": "",
+      "datetime": "05/12/2021-10:21",
+      "payment_method": "",
+      "payment_type": "link",
+      "id_bold_transaction": "",
+      "amount": 200000,
+      "bold_reduction": 15000
+    },
+    {
+      "state": "",
+      "datetime": "05/07/2021-10:21",
+      "payment_method": "",
+      "payment_type": "datafono",
+      "id_bold_transaction": "",
+      "amount": 300000,
+      "bold_reduction": 15000
+    },
+    {
+      "state": "",
+      "datetime": "11/04/2021-10:21",
+      "payment_method": "",
+      "payment_type": "datafono",
+      "id_bold_transaction": "",
+      "amount": 300000,
+      "bold_reduction": 15000
+    }
+  ]
+}
