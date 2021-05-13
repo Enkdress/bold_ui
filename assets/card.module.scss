@@ -41,3 +41,11 @@ $gradientDark: linear-gradient(90deg, rgba(17,30,108,1) 0%, rgba(59,37,100,1) 59
   border-radius: 0 0 8px 8px;
   height: 100%;
 }
+
+@media screen and (max-width: 430px) {
+  .card {
+    width: 100% !important;
+    margin-bottom: 20px;
+    height: 250px;
+  }
+}

@@ -28,7 +28,6 @@ function SalesList() {
         isDark
         isFullWidthContent
       />
-      ;
     </section>
   );
 }
@@ -41,6 +40,7 @@ function SalesTable({ datasource = {} }) {
       title: "Transaccion",
       dataIndex: "state",
       rowKey: "0",
+      ellipsis: true,
       render: (text, record) => {
         const isPaySuccess = record.state.includes("exitoso")
           ? "table__success"
@@ -76,6 +76,7 @@ function SalesTable({ datasource = {} }) {
       title: "Fecha y hora",
       dataIndex: "datetime",
       rowKey: "1",
+      ellipsis: true,
       render: (text) => (
         <span style={{ color: "#777", fontSize: "16px" }}>{text}</span>
       ),
@@ -84,6 +85,7 @@ function SalesTable({ datasource = {} }) {
       title: "Metodo de pago",
       dataIndex: "payment_method",
       rowKey: "2",
+      ellipsis: true,
       render: (text) => {
         return (
           <div
@@ -100,6 +102,7 @@ function SalesTable({ datasource = {} }) {
       title: "ID transaccion Bold",
       dataIndex: "id_bold_transaction",
       rowKey: "3",
+      responsive: ["md"],
       render: (text) => {
         return <span style={{ fontSize: "16px", color: "#777" }}>{text}</span>;
       },
@@ -134,14 +137,16 @@ function SalesTable({ datasource = {} }) {
     },
   ];
 
+  const scroll = !datasource ? { x: true } : { y: 280, x: true };
+
   return (
     <Table
       rowClassName="custom-rows"
-      responsive
       pagination={false}
       columns={columns}
       dataSource={datasource}
-      scroll={{ y: 300, x: true }}
+      scroll={scroll}
+      rowKey={(record) => record.id}
     />
   );
 }

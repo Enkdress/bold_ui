@@ -225,3 +225,30 @@ $gradientLight: linear-gradient(90deg, rgba(152,61,105,1) 0%, rgba(183,63,95,1) 
   flex-direction: column;
 }
 
+@media screen and (max-width: 430px) {
+  .container__resume {
+    flex-direction: column;
+
+    & .filters {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .container__extrafilter {
+    height: 100px;
+    z-index: 10;
+
+    & .selectFilter {
+      width: 50%;
+    }
+  }
+
+  .table__payment {
+    display: initial;
+  }
+
+  .table__transaction {
+    display: initial;
+  }
+}

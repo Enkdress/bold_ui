@@ -5,7 +5,7 @@ import SalesFilterProvider from "components/Filter/filter.provider";
 function Home({ salesList, ...rest }) {
   return (
     <SalesFilterProvider initialValue={{ salesList, ...rest }}>
-      <SalesResume />;
+      <SalesResume />
       <SalesList />
     </SalesFilterProvider>
   );
