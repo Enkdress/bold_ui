@@ -4,10 +4,10 @@
 
 ## Descripcion
 El desarrollo se realizo con las siguientes herramientas:
-* SCSS como preprocesador de css
-* Ant design como framework css (Solo se utilizo la tabla)
-* React como libreria UI
-* NextJs como framework frontend
+* [SCSS](https://sass-lang.com) como preprocesador de css
+* [Ant design](https://ant.design) como framework css (Solo se utilizo la tabla)
+* [React](https://reactjs.com) como libreria UI
+* [NextJs](https://nextjs.org) como framework frontend basado en react
 
 Estas herramientas usadas permiten que el desarrollo sea mucho mas agil
 
