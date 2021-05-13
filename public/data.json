@@ -1,6 +1,7 @@
 {
   "sales": [
     {
+      "id": 1,
       "state": "cobro exitoso",
       "datetime": "05/14/2021-10:21",
       "payment_method": "**** **** **** 7711",
@@ -10,6 +11,7 @@
       "bold_reduction": 15000
     },
     {
+      "id": 2,
       "state": "cobro no realizado",
       "datetime": "05/14/2021-10:21",
       "payment_method": "**** **** **** 7711",
@@ -19,6 +21,7 @@
       "bold_reduction": 0
     },
     {
+      "id": 3,
       "state": "cobro exitoso",
       "datetime": "05/15/2021-10:21",
       "payment_method": "**** **** **** 7711",
@@ -28,6 +31,7 @@
       "bold_reduction": 15000
     },
     {
+      "id": 4,
       "state": "cobro exitoso",
       "datetime": "05/15/2021-10:21",
       "payment_method": "**** **** **** 7711",
@@ -37,6 +41,7 @@
       "bold_reduction": 0
     },
     {
+      "id": 5,
       "state": "cobro no realizado",
       "datetime": "05/15/2021-10:21",
       "payment_method": "**** **** **** 7711",
@@ -46,6 +51,7 @@
       "bold_reduction": 15000
     },
     {
+      "id": 6,
       "state": "cobro no realizado",
       "datetime": "05/16/2021-10:21",
       "payment_method": "**** **** **** 7711",
