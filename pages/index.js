@@ -14,18 +14,14 @@ function Home({ salesList, ...rest }) {
 export default Home;
 
 export const getStaticProps = async () => {
-  let url;
   const { formatDate } = await import("../components/helpers/formatDates");
   const { getSalesResume } = await import(
     "../components/helpers/getSalesResume"
   );
 
-  process.env.VERCEL_ENV == "production"
-    ? (url = "https://" + process.env.VERCEL_URL + "/data.json")
-    : (url = "http://localhost:3000/data.json");
-  const res = await fetch(url);
+  const res = await fetch("https://bold-ui.vercel.app/data.json");
   const data = await res.json();
-
+  console.log(data);
   const sales = data.sales.filter(
     (sale) => formatDate(sale.datetime).day == formatDate().day
   );
